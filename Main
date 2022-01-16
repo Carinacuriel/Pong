@@ -1,0 +1,42 @@
+package Pong;
+
+import java.awt.Container;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class Main 
+{
+	Font titleFont = new Font("Consolas", Font.PLAIN, 200);
+	Font normFont = new Font("Consolas", Font.PLAIN, 100);
+	Container con = new Container();
+	JFrame window;
+	JPanel startButtonPanel;
+	Gameplay gameplay = new Gameplay();
+	//TitleScreenHandler tsHandler = new TitleScreenHandler();
+	
+	public static void main(String[] args)
+	{
+		new Main();
+	}
+	public Main()
+	{
+		
+		window = new JFrame();
+		window.setSize(1000, 500);
+		window.setResizable(false);
+		//window.getContentPane().setBackground(Color.black);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.setLocationRelativeTo(null);
+		window.setTitle("Pong");
+		con = window.getContentPane(); 
+		
+
+		window.setVisible(true);
+		window.add(gameplay);
+		
+	}
+}
